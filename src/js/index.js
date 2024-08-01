@@ -9,5 +9,17 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 //render your react application
-ReactDOM.createRoot(document.getElementById('app')).render(<Home/>);
+ReactDOM.createRoot(document.getElementById('app')).render(<SecondsCounter seconds={123123}/>);
+
+
+const intervalID = setInterval(myCallback, 1000);
+
+let counter = 0;
+function myCallback () {
+    counter++
+    ReactDOM.createRoot(document.getElementById('app')).render(<SecondsCounter seconds={123123}/>);
+
+
+    
+}
 
